@@ -209,7 +209,7 @@ function animateCards(axis, value) {
   });
 }
 
-const bgArr = ["./cynthia.jpg" , "./lazarev.jpg" , "./zajno.jpg" , "./3dearth.jpg"]
+const bgArr = ["./cynthia.jpg" , "./zajno.jpg" , "./3dearth.jpg" , "./lazarev.jpg" , "./codeReview.jpg"]
 
 gsap.utils.toArray(".project-card").forEach((card, index) => {
  
@@ -223,6 +223,52 @@ gsap.utils.toArray(".project-card").forEach((card, index) => {
   })
     
   })
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const sendButton = document.getElementById('sendButton');
+    
+    sendButton.addEventListener('click', function() {
+      // Get form values
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const phone = document.getElementById('contactPhone').value;
+      const message = document.getElementById('contactMessage').value;
+      
+      // Create contact object
+      const contactData = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+      };
+      
+      // Log to console
+      console.log('Contact Form Submission:', contactData);
+      
+      if(contactData.name && contactData.email && contactData.phone && contactData.message){
+
+        Swal.fire({
+          title: 'Message Sent!',
+          text: 'Thank you for contacting me. I will get back to you soon.',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        });
+      }else{
+        Swal.fire({
+          title: 'Error',
+          text: 'All fields are required!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
+      }
+      
+     
+      document.getElementById('contactName').value = '';
+      document.getElementById('contactEmail').value = '';
+      document.getElementById('contactPhone').value = '';
+      document.getElementById('contactMessage').value = '';
+    });
+  });
 
 
   

@@ -50,7 +50,7 @@
         <h1>About</h1>
         <div class="about-top">
           <h1 class="web-dev">Web Developer</h1>
-          <h1 class="designer">UI-UX Designer</h1>
+          <h1 class="designer">Android developer</h1>
         </div>
 
         <div class="about-bottom">
@@ -80,7 +80,7 @@
 
             <div class="skill">
               <h1>Html</h1>
-              <img src="./assests//html.png" class="skill-logo" alt="" />
+              <img src="./assests/html.png" class="skill-logo" alt="" />
             </div>
             <div class="skill">
               <h1>css</h1>
@@ -108,11 +108,11 @@
             </div>
             <div class="skill">
               <h1>Mongoose</h1>
-              <img src="./assests//mongoose.png" class="skill-logo" alt="" />
+              <img src="./assests/mongoose.png" class="skill-logo" alt="" />
             </div>
             <div class="skill">
               <h1>three.js</h1>
-              <img src="./assests//three.png" class="skill-logo" alt="" />
+              <img src="./assests/three.png" class="skill-logo" alt="" />
             </div>
             <div class="skill">
               <h1>gsap</h1>
@@ -124,7 +124,7 @@
             </div>
             <div class="skill">
               <h1>lenis</h1>
-              <img src="./assests/le" class="skill-logo" alt="" />
+              <img src="./assests/Lenis.png" class="skill-logo" alt="" />
             </div>
             <div class="skill">
               <h1>framer motion</h1>
@@ -149,6 +149,10 @@
             <div class="skill">
               <h1>express</h1>
               <img src="./assests/express.png" class="skill-logo" alt="" />
+            </div>
+            <div class="skill">
+              <h1> react native</h1>
+              <img src="./assests/reactNative.png" class="skill-logo" alt="" />
             </div>
           </details>
 
@@ -195,17 +199,6 @@
 
           </div>
 
-          <!-- URL Vault -->
-          <div class="project-card-2 project-card">
-            <div class="overlay">
-              <div class="overlay-left">
-                <p>   A MERN stack-based platform that allows users to securely save, manage, and access important URLs remotely, featuring a clean UI and efficient backend for seamless bookmarking.</p>
-              </div>
-              <div class="overlay-right">   <button><a href="/">Visit</a></button></div>
-            </div>
-          </div>
-
-
           <!-- Zajno -->
           <div class="project-card-3 project-card">
             <div class="overlay">
@@ -213,17 +206,39 @@
                 <p> A detailed and interactive recreation of the Zajno website, utilizing GSAP for smooth animations, fluid transitions, and an engaging user experience with modern design aesthetics.</p>
               </div>
               <div class="overlay-right">
-                <button><a href="/">Visit</a></button>
+                <button><a href="https://zajno-clone.netlify.app/" target="_blank">Visit</a></button>
               </div>
             </div>
           </div>
 
+          <!-- the planet  -->
           <div class="project-card-4 project-card">
             <div class="overlay">
               <div class="overlay-left">
                 <p>A stunning 3D-rendered planet created using Three.js and GSAP, featuring smooth animations and realistic textures for an interactive space-themed experience.</p>
               </div>
               <div class="overlay-right">  <button><a target="_blank" href="https://the-planet-3d.netlify.app/">Visit</a></button></div>
+            </div>
+          </div>
+
+          
+          <!-- URL Vault -->
+          <div class="project-card-2 project-card">
+            <div class="overlay">
+              <div class="overlay-left">
+                <p>   A MERN stack-based platform that allows users to securely save, manage, and access important URLs remotely, featuring a clean UI and efficient backend for seamless bookmarking.</p>
+              </div>
+              <div class="overlay-right">   <button><a href="https://url-saver-fr.netlify.app/">Visit</a></button></div>
+            </div>
+          </div>
+
+          <!-- code review project -->
+          <div class="project-card-4 project-card">
+            <div class="overlay">
+              <div class="overlay-left">
+                <p>Streamline JavaScript development with intelligent AI reviews, ensuring cleaner, optimized, and error-free code instantly.</p>
+              </div>
+              <div class="overlay-right">  <button><a target="_blank" href="https://js-code-reviewer.netlify.app/">Visit</a></button></div>
             </div>
           </div>
 
@@ -235,12 +250,14 @@
             <video src="./assests/dailyGo.mp4" autoplay loop muted class="example"></video>
             <div class="text-container">
               <h2 style="margin-bottom: 10px;">Description</h2>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis sit beatae repellat alias eveniet voluptates, nihil inventore natus, fugit repudiandae accusamus consequuntur quidem dolorem debitis nulla deserunt eaque obcaecati! Quam possimus perferendis numquam saepe fuga repellendus ullam debitis expedita porro rem velit vel magni nostrum, </p>
+              <p>During my one-month internship, I worked on the DailyGO Android mobile app, where I was responsible for developing the complete UI and integrating several backend APIs. This experience helped me strengthen my skills in mobile app development, UI design, and API communication, contributing to a smooth and functional user experience.</p>
             </div>
           </div>
 
           <div class="mobile-main">
-            <video src="./assests/dailyGo.mp4" autoplay loop muted class="example"></video>
+            <div class="example" style="justify-content: center; align-items: center; display: flex; background-color: black;">
+              <h1 style="color: white;">In progress</h1>
+            </div>
             <div class="text-container">
               <h2 style="margin-bottom: 10px;">Description</h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis sit beatae repellat alias eveniet voluptates, nihil inventore natus, fugit repudiandae accusamus consequuntur quidem dolorem debitis nulla deserunt eaque obcaecati! Quam possimus perferendis numquam saepe fuga repellendus ullam debitis expedita porro rem velit vel magni nostrum, </p>
@@ -261,16 +278,19 @@
           <div class="form">
             <div>
               <input type="text" placeholder="Enter your name" class="name" id="contactName">
-              <input type="text" placeholder="Enter your email" class="email" id="contactEmail">
-              <input type="text" placeholder="Enter your phone number" class="phone" id="contactPhone">
+              <input type="email" placeholder="Enter your email" class="email" id="contactEmail">
+              <input type="tel" placeholder="Enter your phone number" class="phone" id="contactPhone">
               <textarea placeholder="Enter your message" id="contactMessage"></textarea>
               <button style="overflow: hidden;" id="sendButton">send</button>
               <div class="social-media">
-                <a href="www.linkedin.com/in/vishal-anand-00kb" target="_blank"><img src="./linkedin.png" alt="img"></a>
-                <a href=""><img src="./fb.png" alt="img"></a>
-                <a href=""><img src="./insta.png" alt="img"></a>
+                <a href="https://www.linkedin.com/in/vishal-anand-00kb" target="_blank"><img src="./linkedin.png" alt="img"></a>
+                <a href="https://www.instagram.com/_vishal.anand?igsh=OWh4N2Y5aG55aHQ1&utm_source=qr" target="_blank"><img src="./insta.png" alt="img"></a>
                 <a href=""><img src="./twitter.png" alt="img"></a>
+                <div style="background-color:rgb(69, 69, 69); padding: 5px 10px; border-radius: 8px; ">
+                  <a style="text-decoration: none; color: white;" href="https://drive.google.com/drive/folders/1O356iTiDD_YVNa6y77vGQJgCdLEwxkjI?usp=sharing" target="_blank">Resume</a>
+                </div>
               </div>
+              
             </div>
           </div>
         </div>
