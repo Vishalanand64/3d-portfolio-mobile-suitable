@@ -14,7 +14,7 @@ cameraTwo.position.z = 2;
 
 const textureLoader = new THREE.TextureLoader();
 const  cylinderGeometry = new THREE.CylinderGeometry(1.4, 1.4, 0.9, 64, 32, true); 
-let cylinderTexture = textureLoader.load("./final.png");
+let cylinderTexture = textureLoader.load("./assests/final.png");
 cylinderTexture.colorSpace = THREE.SRGBColorSpace;
 
 
