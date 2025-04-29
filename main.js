@@ -4,6 +4,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import LocomotiveScroll from 'locomotive-scroll'; 
 
 gsap.registerPlugin(ScrollTrigger);
+const innerW = window.innerWidth
+
 
 
 const sceneTwo = new THREE.Scene();
@@ -13,7 +15,14 @@ cameraTwo.position.z = 2;
 const textureLoader = new THREE.TextureLoader();
 let cylinderTexture = textureLoader.load("./final.png");
 cylinderTexture.colorSpace = THREE.SRGBColorSpace;
-const cylinderGeometry = new THREE.CylinderGeometry(1.4, 1.4, 0.9, 64, 32, true); 
+let cylinderGeometry ;
+if(innerW >= 500){
+ 
+  cylinderGeometry = new THREE.CylinderGeometry(1.4, 1.4, 0.9, 64, 32, true); 
+}else{
+  cylinderGeometry = new THREE.CylinderGeometry(0.8, 1.1, 0.8, 64, 32, true); 
+}
+
 const cylinderMaterial = new THREE.MeshBasicMaterial({ 
   map: cylinderTexture,
   transparent: true,
@@ -21,6 +30,7 @@ const cylinderMaterial = new THREE.MeshBasicMaterial({
 });
 const cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial);
 cylinder.rotation.x = 0.4;
+
 
 cylinder.position.y = 0.35;
 sceneTwo.add(cylinder);
@@ -121,7 +131,7 @@ tl.from(".web-dev", {
   }, "-=0.8");   
 
 
-  let innerW = window.innerWidth
+  
 
 
 if(innerW >= 400){
@@ -202,7 +212,7 @@ function animateCards(axis, value) {
         scroller: "#wrapper",
         trigger: card,
         scrub: 2,
-        start: axis === "y" ? "0% top" : "-50% 80%",
+        start: axis === "y" ? "0% top" : "-50% 70%",
         end: "0% bottom",
       },
     });
@@ -269,7 +279,3 @@ gsap.utils.toArray(".project-card").forEach((card, index) => {
       document.getElementById('contactMessage').value = '';
     });
   });
-
-
-  
-  

@@ -71,7 +71,7 @@
 
 .nav-right{
 width: auto;
-height: 100%;
+height: auto;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -596,7 +596,7 @@ summary span {
   justify-content: center;
 } 
 .example{
-  width: 250px;
+  width: 280px;
   height: 500px;
 }
 .modile-wrapper{
@@ -623,6 +623,9 @@ summary span {
 
 
 @media (max-width: 480px) {
+  .nav-right h2{
+    font-size: 14px;
+  }
   .overlay{
     width: 80%;
     height: 80%;
@@ -649,18 +652,28 @@ summary span {
   flex-direction: column;
   gap:30px ;
   align-items: center;
+
 }
 .example{
   width: 300px;
   height: 600px;
 }
 .mobile-main{
- 
+  flex-direction: column;
    width: auto;
   height: auto;
+  align-items: center;
+  position: relative;
+  border-radius: 8px;
 }
 .text-container{
-  display: none;
+ margin-top: 20px;
+ width: 270px;
+ height: auto;
+ border-radius: 8px;
+ padding: 10px;
+ backdrop-filter: blur(8px);
+ background-color: rgba(255, 255, 255, 0.211);
 }
 .navbar{
   font-size: 16px;
@@ -680,16 +693,17 @@ summary span {
   font-size: 12vw;
 }
 .hero-page img{
-  width: 90vw;
-  height: 45vh;
+  width: 85vw;
+  height: 40vh;
 }
 .overflow{
   width: 100%;
   height: auto;
   flex-direction: column;
-  justify-content: center;
+  justify-content:start;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 22vh;
+  
 }
 .left-overflow{
   width: 80%;
@@ -697,9 +711,9 @@ summary span {
  
 }
 .left-overflow p{
-  font-size: 14px;
+  font-size: 12px;
   height: auto;
-  margin-top: 120px;
+  text-align: center;
 }
 .right-overflow button{
   font-size: 14px;
@@ -708,22 +722,32 @@ summary span {
 }
 
 .about-page{
-  height: 40vh;
+  height: auto;
   padding: 0 4vw;
+
 }
 .about-page > h1{
   font-size: 7vw;
 }
 .about-top{
-  height: 30%;
+  height: auto;
   justify-content: flex-start;
   padding-top: 10vw ;
+  
 }
 .about-top h1{
-  font-size: 5vw;
+  font-size: 4vw;
   letter-spacing: 4px;
+  padding: 10px;
+  text-align: left;
   
-  
+}
+.about-bottom{
+  height: auto;
+  align-items: flex-start;
+  padding-bottom: 20px;
+
+ 
 }
 .about-bottom p {
   font-size: 3vw;
@@ -745,8 +769,9 @@ summary span {
 }
 
 .custom-marker{
-  width: 18px;
+  width: 8px;
   top: 25px;
+  right: 15px;
 }
 summary span {
   font-size: 4.5vw;
