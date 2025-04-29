@@ -13,15 +13,10 @@ const cameraTwo = new THREE.PerspectiveCamera(75, window.innerWidth / window.inn
 cameraTwo.position.z = 2;
 
 const textureLoader = new THREE.TextureLoader();
+const  cylinderGeometry = new THREE.CylinderGeometry(1.4, 1.4, 0.9, 64, 32, true); 
 let cylinderTexture = textureLoader.load("./final.png");
 cylinderTexture.colorSpace = THREE.SRGBColorSpace;
-let cylinderGeometry ;
-if(innerW >= 500){
- 
-  cylinderGeometry = new THREE.CylinderGeometry(1.4, 1.4, 0.9, 64, 32, true); 
-}else{
-  cylinderGeometry = new THREE.CylinderGeometry(0.8, 1.1, 0.8, 64, 32, true); 
-}
+
 
 const cylinderMaterial = new THREE.MeshBasicMaterial({ 
   map: cylinderTexture,
